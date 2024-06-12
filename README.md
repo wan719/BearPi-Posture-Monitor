@@ -1,4 +1,5 @@
-# 教程及技术支持请跳转至官网：[www.bearpi.cn](https://www.bearpi.cn/dev_board/bearpi/hm/nano/)
+# 教程及技术支持请跳转至官网：
+# [www.bearpi.cn](https://www.bearpi.cn/dev_board/bearpi/hm/nano/)
 
 ---
 
