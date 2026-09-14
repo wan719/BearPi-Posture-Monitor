@@ -1,0 +1,23 @@
+# OpenHarmony build output
+out/
+
+# Hi3861 build output
+vendor/hisi/hi3861/hi3861/output/
+vendor/hisi/hi3861/hi3861/build/build_tmp/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# binaries
+*.bin
+*.out
+*.map
+*.asm
+*.a
+*.o
+*.obj
