@@ -54,6 +54,8 @@ lite_component("app") {
         #"Z2_hi3861_flash_ylc:flash_example",
         #"my_first_app:myapp",
         "my_posture_monitor:e53_sc2_example",
+        #"my_wifi_test:wifi_sta_connect",
+        #"my_mqtt_test:iot_mqtt",
 
     ]
 }
