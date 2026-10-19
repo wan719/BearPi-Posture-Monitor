@@ -1,3 +1,73 @@
+# BearPi Posture Monitor
+
+基于 BearPi-HM Nano + OpenHarmony + MPU6050 的姿态监测系统。
+
+
+## 项目简介
+
+本项目基于小熊派 BearPi-HM Nano 开发板，
+在官方 E53_SC2 示例基础上扩展，实现：
+
+- 三轴加速度采集
+- 姿态变化检测
+- 运动状态识别
+- 跌落/冲击检测
+- LED 状态反馈
+- 布防/撤防控制
+
+
+## Hardware
+
+- BearPi-HM Nano
+- E53_SC2 扩展板
+- MPU6050
+
+
+## Current Version
+
+V5.4 — 实时仪表盘与历史事件
+
+Features:
+
+- NORMAL
+- TILT
+- MOVING
+- IMPACT
+
+
+## Development Environment
+
+- Windows 11
+- WSL2 Ubuntu 20.04
+- OpenHarmony 3.2
+- Hi3861
+- GN + Ninja + SCons
+## Dashboard 快速启动
+
+Windows 上先启动已配置的 MySQL 8.0 和 Mosquitto；
+保留现有数据库、应用账号及 MQTT 配置。WSL 需 Java 17、Maven 和 Node.js。
+首次使用在 backend 中执行 mvn package 准备依赖，之后标准启动方式为：
+
+```bash
+cd ~/workspace/bearpi-hm_nano/dashboard/backend
+bash start-backend.sh
+```
+
+等隐藏密码提示出现后输入，不再手动导出 DB_PASSWORD。
+同一份输入先通过 JDBC 验证，再传给 Spring Boot；密码不会保存到文件。
+启动脚本按自身位置定位项目，换用户名或克隆目录也可使用。
+
+另开 WSL 终端运行前端：
+
+```bash
+cd ~/workspace/bearpi-hm_nano/dashboard/frontend
+npm ci
+npm run dev
+```
+
+访问 http://localhost:5173/，后端监听 8080。
+完整启动、测试、MySQL 与 MQTT 前提见 [V5.4 开发说明](dashboard/backend/V5.4-README.md)。
+
 # 教程及技术支持请跳转至官网：
 # [www.bearpi.cn](https://www.bearpi.cn/dev_board/bearpi/hm/nano/)
 

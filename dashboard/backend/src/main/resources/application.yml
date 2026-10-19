@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+
+spring:
+  application:
+    name: posture-monitor-backend
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/posture_monitor?connectionTimeZone=UTC
+    username: posture_app
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 3000
+      maximum-pool-size: 5
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+mqtt:
+  broker: tcp://127.0.0.1:1883
+  client-id: posture-monitor-backend
+  topic: bearpi/posture/status
+  qos: 0

@@ -21,3 +21,11 @@ __pycache__/
 *.a
 *.o
 *.obj
+# Local Wi-Fi / MQTT credentials
+applications/BearPi/BearPi-HM_Nano/sample/my_posture_monitor/include/wifi_config.h
+# Spring Boot / Maven
+dashboard/backend/target/
+
+# Local environment secrets
+.env
+.env.*
